@@ -2,7 +2,7 @@
 
 Overview
 
-This repository explore model to classify e-commerce products using images
+This repository explore model to classify e-commerce products using images.
 Dataset
 The dataset is supplied in form of zip file that contains 2 directories : train, test.
 ~100K images are numbered from 00, 01, 02 to 41 and stored in 42 sub directories of train folder, including T-shirts, rings, medical products, etc.
