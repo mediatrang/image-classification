@@ -53,3 +53,17 @@ def get_callbacks(filepath, patience=5):
     lr_reduce = ReduceLROnPlateau(monitor='val_acc', factor=0.1, epsilon=1e-5, patience=patience, verbose=1)
     msave = ModelCheckpoint(filepath, save_best_only=True)
     return [lr_reduce, msave]
+
+
+#Train model
+model=get_model()
+history = model.fit(
+    X_train,Y_train,
+    batch_size=32,
+    epochs=30,
+    validation_data=(X_val, Y_val)
+)
+
+model.compile(optimizer='adam',
+              loss=tf.keras.losses.BinaryCrossentropy(from_logits=True),
+              metrics=['accuracy'])
