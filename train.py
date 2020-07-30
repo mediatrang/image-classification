@@ -25,7 +25,7 @@ for dirname, _, filenames in os.walk(dir2):
         if (filename[-3:] == 'jpg'):
             ValImagePaths.append(os.path.join(dirname, filename))
             
-#Promvx
+#Processing images
 
 imgSize = 64
 X_train = []
